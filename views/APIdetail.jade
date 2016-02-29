@@ -1,0 +1,78 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title #{name}
+		link(rel="stylesheet" href="/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/myresume.css")
+	body
+		header.topbar.top-fix
+			nav
+				ul.breadcrumb
+					li
+						a(href="" ) 首页
+					li.active #{name}
+		div.mainWraper
+			section.content
+				div.name
+					h3 #{name}(#{param1})
+						i.label.bg-red h5
+				div.desc
+					h5 概述
+					p #{description} //根据提供的原始 HTML 标记字符
+				div.param
+					h5 参数
+					.paramItem
+						span.paramName className
+						span.paramType string
+						p.paramdesc 传入的class名称
+				div.example
+					h5 示例
+					div.e-item
+						span.item-title 实例一
+						p.item-desc.text_cn 获取所有class名字为test的元素
+						h6 javascript代码：
+						code var aTest = document.getElementsByClassName('test');
+					div.e-item
+						span.item-title 实例二
+						p.item-desc.text_cn 获取所有class名字为test的元素
+						h6 javascript代码：
+						code var aTest = document.getElementsByClassName('test');
+				div.support
+					h5 兼容性
+					table.table.table-bordered
+						thead
+							tr
+								th IE
+								th FF
+								th Chrome
+								th other
+						tbody
+							tr
+								th 9+
+								th 3.0+
+								th YES
+								th UnKwon
+			section.pageturn.clearfix
+				a.prevp(href="") 上一篇:aaaaaaa
+				a.nextp(href="") 下一篇:bbbbbbb
+		footer.footer.clearfix
+			div.description.col-md-4
+				p.title 前端
+				p 本站所有内容都由本人制作，放在此处分享给大家，供学习、参考。
+					<br/> 有任何疑问可以QQ练习我，大家共同学习进步。
+			div.friendLink.col-md-3
+				p.title 友情链接
+				ul
+					li
+						a(href="http://jquery.com/" target="_blank") jQuery
+					li
+						a(href="https://developer.mozilla.org" target="_blank") MDN
+					li
+						a(href="https://github.com/twbs/bootstrap" target="_blank") Bootstrap
+					li
+						a(href="http://glyphicons.com/" target="_blank") Glyphicons
+			div.thanks.col-md-5
+				p
+					span  copyright&nbsp;&copy;2016&nbsp;DongMin &nbsp;
+						<br/> 以上内容所有权归董敏所有

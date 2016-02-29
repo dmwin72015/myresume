@@ -1,0 +1,10 @@
+module.exports = {
+    mysql_dev: {
+        host: 'localhost',
+        user: 'root',
+        password: 'root1234',
+        database: 'zns_wish',
+        connectionLimit: 10,
+        supportBigNumbers: true
+    }
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台-邮箱</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/blue-theme.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/ionicons.min.css">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/myMain.js"></script>
+</head>
+<body class="skin_blue fix">
+<div class="wapper">
+    <header id="header" class="main-header">
+        <a href="./index.html" title="logo" class="logo">
+            <span class="logo-mini"></span>
+            <span class="logo-lg">DONG BG</span>
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="sidebar-toggle">
+                <span class="glyphicon glyphicon-list"></span>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-bell"></span>
+                            <span class="">提醒</span>
+                            <span class="label label-warning">3</span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">First son1</a></li>
+                            <li><a href="#">First son2</a></li>
+                            <li><a href="#">First son3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <span>消息</span>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Second son1</a></li>
+                            <li><a href="#">Second son2</a></li>
+                            <li><a href="#">Second son3</a></li>
+                            <li><a href="#">Second son4</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span>个人</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Second son1</a></li>
+                            <li><a href="#">Second son2</a></li>
+                            <li><a href="#">Second son3</a></li>
+                            <li><a href="#">Second son4</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="input-group">
+                                <span></span>
+                                <a href="#">顶部是否固定</a>
+                            </li>
+                            <li><a href="#">Second son2</a></li>
+                            <li><a href="#">Second son3</a></li>
+                            <li><a href="#">Second son4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="input-group input-group-sm pull-right search">
+                    <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+
+    <aside class="main-sildbar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="img-box pull-left">
+                    <img src="../images/head.jpg" alt="" class="img-circle">
+                </div>
+                <div class="info pull-left">
+                    <p>Dong Admin</p>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-circle text-success"></i>OnLine
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="">offLine</li>
+                            <li class="">Eatting</li>
+                            <li class="">Sleeping</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/头像-->
+            <ul class="sidebar-menu">
+                <li class="header"></li>
+                <li class="tree-view">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span class="">人员管理</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="javascript:;">增加人员</a></li>
+                        <li><a href="javascript:;">查勘人员</a></li>
+                    </ul>
+                </li>
+                <li class="tree-view">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span class="">人员管理</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="javascript:;">增加人员</a></li>
+                        <li><a href="javascript:;">查勘人员</a></li>
+                    </ul>
+                </li>
+                <li class="tree-view">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-book"></i>
+                        <span class="">文章管理</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="javascript:;">增加文章</a></li>
+                        <li><a href="javascript:;">查勘文章</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./calendar.html">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        <span>日历</span>
+                        <i class="label pull-right bg-red">5</i>
+                    </a>
+                </li>
+                <li class="tree-view open">
+                    <a href="./mail.html">
+                        <i class="glyphicon glyphicon-folder-open"></i>
+                        <span>收件箱</span>
+                        <i class="label pull-right bg-red">15</i>
+                    </a>
+                </li>
+                <li class="tree-view">
+                    <a href="">
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                        <span>新闻</span>
+                        <i class="label pull-right bg-green">new</i>
+                    </a>
+                </li>
+                <li class="tree-view">
+                    <a href="./friend.html">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>朋友</span>
+                        <i class="label pull-right bg-green">new</i>
+                    </a>
+                </li>
+            </ul>
+            <!--/菜单-->
+        </section>
+    </aside>
+    <!--/sidebar-->
+
+    <div class="content-wapper" style="min-height: 700px">
+        <section class="content-header">
+            <h3>邮箱</h3>
+            <ol class="breadcrumb pull-right">
+                <li><a href="#">首页</a></li>
+                <li class="active">邮箱</li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="btn-group btn-group-justified margin-bot20">
+                        <a href="javascript:;" class="btn btn-success font-bold">写信</a>
+                        <a href="javascript:;" class="btn btn-success font-bold">收信</a>
+                    </div>
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">文件夹</h3>
+                        </div>
+                        <div class="box-body no-padding">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-inbox"></i>收件箱
+                                        <i class="label label-success pull-right">5</i>
+                                    </a>
+                                </li>
+                                <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>发件箱</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-file-text-o"></i>草稿箱</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-users"></i>通讯录</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-trash-o"></i>回收站</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">标签</h3>
+                        </div>
+                        <div class="box-body no-padding">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="javascript:;"><i class="fa fa-circle-o text-red"></i>重要</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o text-yellow"></i>一般</a></li>
+                                <li><a href="javascript:;"><i class="fa fa-circle-o text-light-blue"></i>垃圾</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="box box-primary" data-type="inbox">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">收件箱</h3>
+                            <div class="box-tool pull-right has-feedback">
+                                <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="box-body no-padding">
+                            <div class="mailbox-controls">
+                                <div class="" data-bak="btn-group">
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="selectAllItem" title="全选/全不选"><i class="fa  fa-check-square-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="selectReveItem" title="反选"><i class="fa fa-square-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="deleteItem" title="删除"><i class="fa fa-trash-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="replayItem" title="回复" ><i class="fa fa-reply"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="sendtoItem" title="转发" ><i class="fa fa-share"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="refreshItem" title="刷新"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="pull-right">
+                                    1-50/200
+                                    <div class="btn-group">
+                                        <a href="javascript:;" class="btn btn-default btn-sm" id="prevPage"><i class="fa fa-chevron-left"></i></a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm" id="nextPage"><i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mailbox-messages ">
+                                <ul class="mailMsg-UL">
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue checked"><input type="checkbox" class="opacity-zero" checked="checked"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">三天前</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">2小时前</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name unchecked">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">10分钟前</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name unchecked">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">12:35</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name unchecked">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">1月7号</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">2015-12-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">2015-12-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name unchecked">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">2015-12-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name unchecked">这是一封邮件。。。。。。。</a>
+                                        <span class="mailMsg-date pull-right">2015-12-25</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icheckbox_flat-blue"><input type="checkbox" class="opacity-zero"></a>
+                                        <a href="#" class="mailMsg-star"><i class="fa fa-star-o text-yellow"></i></a>
+                                        <a href="#" class="mailMsg-sender">张三</a>
+                                        <a href="#" class="mailMsg-name">This is a email from myself.....</a>
+                                        <span class="mailMsg-date pull-right">2015-12-25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-footer no-padding">
+                            <div class="mailbox-controls">
+                                <div class="btn-group">
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="selectAllItem" title="全选"><i class="fa  fa-check-square-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="selectReveItem" title="反选"><i class="fa fa-square-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" title="删除" id="deleteItem"><i class="fa fa-trash-o"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" title="回复" id="replayItem"><i class="fa fa-reply"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" title="转发" id="sendtoItem"><i class="fa fa-share"></i></a>
+                                    <a href="javascript:;" class="btn btn-default btn-sm" id="refreshItem"><i class="fa fa-refresh"></i></a>
+                                </div>
+                                <div class="pull-right">
+                                    1-50/200
+                                    <div class="btn-group">
+                                        <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!--/content-->
+</div>
+</body>
+
+</html>
