@@ -115,7 +115,6 @@ a:visited {
     height: 100%;
 }
 
-
 .icon_menu,
 .image-head,
 .image-head img,
@@ -651,7 +650,6 @@ h1.content-title .more {
     color: #444
 }
 
-
 .topbar {
     width: 100%
 }
@@ -1008,71 +1006,107 @@ a.myWebsite:hover {
 .bgImgBox .close:hover {
     color: #fff;
 }
-.content-saythings .textareaInput{
-	width: 100%;
-	height: 240px;
-	max-width: 100%;
-	max-height: 240px;
-	resize:none;
+
+.content-saythings .textareaInput {
+    width: 100%;
+    height: 240px;
+    max-width: 100%;
+    max-height: 240px;
+    resize: none;
 }
-.form-saythings p>label{
-	color:#999;
-	margin-bottom:5px;
-	font-weight:normal;
+
+.form-saythings p>label {
+    color: #999;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
-.form-saythings p+p{
-	margin-top:15px;
+
+.form-saythings p+p {
+    margin-top: 15px;
 }
 
 .content-saythings input[type=submit],
-.content-saythings input[type=reset]{
-	padding:8px;
-	border:none;
-	width:120px;
-	color:#fff;
+.content-saythings input[type=reset] {
+    padding: 8px;
+    border: none;
+    width: 120px;
+    color: #fff;
 }
-.content-saythings input[type=reset]{
-	background:#999;
-}
-.content-saythings input[type=submit]{
-	margin-left:15px;
-	background:#3B5998;
-}
-/*---------时间线-----------------*/
-.pro-year{
-	width:60px;
-	height:60px;
-	background:#3B5998;
-	transform: rotate(45deg);
-}
-.pro-month-list{
 
+.content-saythings input[type=reset] {
+    background: #999;
 }
-.pro-month-list>li>.pro-month-Txt{
-	display:block;
-	
+
+.content-saythings input[type=submit] {
+    margin-left: 15px;
+    background: #3B5998;
 }
+
+
+/*---------时间线-----------------*/
+.pro-year,.pro-month-line,.pro-month-Txt{
+    position: relative;
+    left:50%;
+    background: #3B5998;
+}
+.pro-year,
+.pro-month-Txt {
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+}
+.pro-year {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    margin-left:-30px;
+}
+.pro-month-list {}
+.pro-month-list>li+li{
+    position: relative;
+    top:-1px;
+}
+.pro-month-Txt {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left:-12px;
+    line-height:24px;
+}
+.pro-month-line{
+    width:8px;
+    height:50px;
+    margin-left:-4px;
+    /*top:-1px;*/
+}
+
 /*-------------------------*/
-.project-time-list>li .pro-item{
-	height:80px;
-	position: relative;
+
+.project-time-list>li .pro-item {
+    height: 80px;
+    position: relative;
 }
-.pro-item>p{
-	text-align: center;
+
+.pro-item>p {
+    text-align: center;
 }
-.pro-name{
-	margin-bottom:5px;
-	color:#3B5998;
+
+.pro-name {
+    margin-bottom: 5px;
+    color: #3B5998;
 }
-.pro-time{
-	position: relative;
-	background:#3B5998;
-	padding:5px 10px;
-	color:#fff;
-	border-radius:5px;
+
+.pro-time {
+    position: relative;
+    background: #3B5998;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
 }
-.pro-time:after{
-	content: '';
+
+.pro-time:after {
+    content: '';
     display: block;
     position: absolute;
     right: -6px;
@@ -1086,35 +1120,25 @@ a.myWebsite:hover {
     clear: both;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width:1100px) and (max-width:1600px) {
     .container {
         width: 1130px!important
     }
-    .pers-tabs-container{
-		padding-left:0;
-		padding-right:5px; 
-		overflow:hidden;
-	}
+    .pers-tabs-container {
+        padding-left: 0;
+        padding-right: 5px;
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width:800px) {
     .pers-tabs-list,
     .tabs-list,
-    .sidebar,.profile_r {
+    .sidebar,
+    .profile_r {
         display: none
     }
-    .tabs-content-container {	
+    .tabs-content-container {
         margin-right: -15px;
         margin-left: 0;
         width: 100%;
@@ -1122,7 +1146,7 @@ a.myWebsite:hover {
     }
     .pers-tabs-container {
         background: #f4f4f4;
-        padding-right:0;
+        padding-right: 0;
     }
     .cycle-slideshow {
         display: none
@@ -1130,15 +1154,15 @@ a.myWebsite:hover {
     .content-inner-container {
         width: 100%
     }
-    .pers-tabs-container{
-    	padding-right:0;
-    	padding-left:0;
+    .pers-tabs-container {
+        padding-right: 0;
+        padding-left: 0;
     }
-    .page{
-    	padding-top:15px;
+    .page {
+        padding-top: 15px;
     }
-    .widget-profile{
-    	height:auto;
-    	padding-bottom: 15px;
+    .widget-profile {
+        height: auto;
+        padding-bottom: 15px;
     }
 }
