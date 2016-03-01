@@ -414,9 +414,12 @@
             var _this = $(this);
             var sConid = _this.attr('data-content');
             var $bar = $('.progressbar-bar');$bar.css('width', 0);
+            var $pro_item = $('.pro-item');$pro_item.removeClass('show');
+            var $pro_desc = $('.pro-desc-txt');$pro_desc.removeClass('show');
             _this.siblings().removeClass('pers-tabs-active').find('i').removeClass('icon_menu_active');
             _this.addClass('pers-tabs-active').find('i').addClass('icon_menu_active');
             $('#' + sConid).show().siblings().hide();
+
             $cont.css(currType['start']).stop().animate(currType['end'], currType['time'], EASING, function() {
                 switch (sConid) {
                     case '':
@@ -429,14 +432,29 @@
                     case '':
                         break;
                     case 'project':
-                        var n=0;
-                        $('.pro-item').css('left','-180px').animate({
-                            left:'0'
-                        },300);
-                        $('.pro-iconbg').css('height',0).animate({
-                            height:'100%'
-                        },300,function(){
-
+                        var aBgMove = $('.pro-bgmoving');
+                        var num = 0; 
+                        !function moving(){
+                            aBgMove.eq(num).stop().animate({
+                                height:'100%'
+                            },(1-num%2)*400 + 400,function(){
+                                if(num>aBgMove.length) return;
+                                if(num%2==0){
+                                    $pro_item.eq(Math.floor(num/2)).addClass('show');
+                                    $pro_desc.eq(Math.floor(num/2)).addClass('show');
+                                }
+                                moving(num++);
+                            })
+                        }();
+                        $('.pro-month-Txt').on('mouseover',function(){
+                            $('div').css({
+                                position:'absolute',
+                                top:'30px',
+                                left:'100px',
+                                width:'200px',
+                                height:'200px',
+                                bacground:"#eee"
+                            }).appendTo($cont);
                         });
                         break;
                     case '':
