@@ -1,76 +1,30 @@
 @charset "utf-8";
-body { font-family: \5FAE\8F6F\96C5\9ED1 }
-body, ul, p, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0 }
-a:link, a:visited, a:active { text-decoration: none }
-ul { list-style: none; margin: 0; padding: 0; }
-.nav-tabs a { font-size: 20px; }
-.nav a { font-size: 20px; font-weight: bold; }
-.nav.nav-pills li, .nav.nav-pills a { height: 50px; }
-.nav.nav-pills a { font-size: 14px; font-weight: normal; padding: 13px 15px; }
-.textIn2em { text-indent: 2em; }
-.carousel { height: 500px;    /*background-color: #efefef;*/ }
-.carousel .item { height: 500px; }
-.margin50 { margin-top: 50px; background: #fff; }
-.breadcrumb>.active>a { cursor: default; text-decoration: none; color: #777; }
-
-/**/
-.person-box { width: 300px }
-.person-box li { border-bottom: 1px solid #dedede; padding: 3px 0; }
-
-/*相册空间*/
-img { display: block; border: none; width: 100% }
-.pno-padding { padding: 0 !important }
-.pd-top40 { padding-top: 40px !important }
-.pd-bot20 { padding-bottom: 20px }
-.allpadding20 { padding: 20px }
-.rlpadding20 { padding: 0 20px }
-.rlpadding60 { padding: 0 60px }
-.margin-bot20 { margin-bottom: 20px }
-.top-nav-list>li>a, .tab-list>li>a { display: block; padding: 10px 20px; font-size: 14px; }
-.top-nav-list>li.active, .tab-list>li.active { font-weight: 600; }
-.tab-list>li { float: left; position: relative; }
-.ph-fix-topbar { }
-.ph-fix-topbar.top-bar { position: fixed; }
-.top-bar { width: 100%; display: block; min-width: 960px; }
-.topBar-inner { height: 40px; padding: 0 15px; position: relative; border-bottom: 1px solid #F4F4F4; box-shadow: 0 1px 2px #FaF2F2; }
-.logo { float: left; display: block; height: 100%; font-size: 16px; line-height: 40px; }
-.logo:hover { text-decoration: none }
-.top-nav-list, .top-nav-list>li { float: left; }
-.ph-content-wapper { min-width: 960px; }
-
-/*.ph-content-inner{background-color: #F4F4F4}*/
-.box { margin: 0 auto }
-.photo-box { min-width: 960px }
-.photo-box .tab-list>li { border-bottom: 3px solid transparent; transition: border-bottom-color .2s }
-.photo-box .tab-list>li:hover { border-bottom-color: #00ca6d }
-.photo-box .tab-list>li.active { border-bottom-color: #00ca6d }
-.fn-btn-list { padding: 10px 0 }
-.fn-btn-list>a { float: left; }
-.dmbtn, .fn-btn-list>a { padding: 10px 10px; background-color: #00ca6d; margin-right: 15px; color: #fff; border-radius: 4px; }
-.dmbtn.dmbtn-primary { font-weight: 600; font-size: 16px; padding-top: 9px; padding-bottom: 9px; }
-.fn-btn-list>a:hover, .dmbtn-primary:hover { background-color: #00A65A }
-.albums-group { }
-.album-list { }
-.album-list>li { float: left; width: 160px; height: 200px;    /*background-color: #e2e2e2;*/ margin-right: 20px; margin-bottom: 20px; padding: 6px; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, .15); }
-.album-list>li:hover { cursor: pointer }
-.albums-fore-pic { width: 100%; height: 148px; position: relative; }
-.albums-fore-pic>img { display: block; height: 100%; }
-.pic-num { position: absolute; bottom: 8px; right: 8px; font-weight: bold; color: #FFF; font-size: 20px; }
-.albums-info { padding: 5px 0; }
-.albums-info>a:hover { text-decoration: underline }
-.album-info-one { height: 100px; margin-top: 20px; }
-.album-logo { float: left; padding: 3px; border: 1px solid #eee; margin-right: 10px; }
-.album-logo>a { display: block; width: 80px; height: 80px }
-.album-logo img { width: 100%; border: none }
-.album-location { float: left }
-.photo-number { font-size: 14px; color: #444; font-weight: 600; }
-.photo-list-wapper { }
-.photo-list>li { float: left; width: 180px; height: 180px; margin-right: 15px; margin-bottom: 15px; }
-.photo-main { position: relative; overflow: hidden; }
-.photo-img { display: block; width: 180px; height: 140px; }
-.photo-img>img { width: 100%; }
-.photo-view { display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 140px; transition: top .2s; background-color: rgba(0, 0, 0, 0.6); }
-.photo-view>span { color: #FFF; }
-.photo-time, .photo-weizhi { display: block; padding: 5px; }
-.photo-main:hover .photo-view { top: 80px; }
-.photo-bottom { border: 1px solid #cecece; padding: 8px 5px; font-size: 14px; text-align: center; }
+.skin-background{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:-10;
+	background-repeat:no-repeat;
+	background-position:center 0;
+	background-size:cover;
+}
+.topbar{width:100%;height:35px;}
+.topbg{
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-image:linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
+}
+.nav-weather{
+	position: absolute;
+	left:0;
+	top:0;
+	height:100%;
+}
+.wrapper{
+	height:100%;
+}
