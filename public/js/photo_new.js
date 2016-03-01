@@ -259,12 +259,12 @@
                                 var oEv = ev || window.event;
                                 var top = oEv.clientY - disY - $this.offsetParent().offset().top;
                                 if (top >= maxDragTop) {
-                                    top = maxDragTop+0.5;
+                                    top = maxDragTop + 0.5;
                                 } else if (top <= 0) {
                                     top = 0;
                                 }
                                 curBox.css('top', top / maxDragTop * minBoxTop + 'px');
-                                $this.css('top', top+1 + 'px');
+                                $this.css('top', top + 1 + 'px');
                                 dragWaper.show();
                             };
                             document.onmouseup = function(ev) {
@@ -294,7 +294,7 @@
                     top -= 20;
                 }
                 if (top >= maxDragTop) {
-                    top = maxDragTop+0.5;
+                    top = maxDragTop + 0.5;
                 } else if (top <= 0) {
                     top = 0;
                 }
@@ -406,16 +406,20 @@
                 },
                 'time': 620
             },
-            type: 'easeInExpo'};
+            type: 'easeInExpo'
+        };
         var currType = CHANGTYPE['right'];
         var EASING = 'easeInCubic';
-        var BARLENGTH = ['80%','75%','95%','30%','25%','25%'];
+        var BARLENGTH = ['80%', '75%', '95%', '30%', '25%', '25%'];
         $('#tabs-list > li').click(function(ev) {
             var _this = $(this);
             var sConid = _this.attr('data-content');
-            var $bar = $('.progressbar-bar');$bar.css('width', 0);
-            var $pro_item = $('.pro-item');$pro_item.removeClass('show');
-            var $pro_desc = $('.pro-desc-txt');$pro_desc.removeClass('show');
+            var $bar = $('.progressbar-bar');
+            $bar.css('width', 0);
+            var $pro_item = $('.pro-item');
+            $pro_item.removeClass('show');
+            var $pro_desc = $('.pro-desc-txt');
+            $pro_desc.removeClass('show');
             _this.siblings().removeClass('pers-tabs-active').find('i').removeClass('icon_menu_active');
             _this.addClass('pers-tabs-active').find('i').addClass('icon_menu_active');
             $('#' + sConid).show().siblings().hide();
@@ -425,7 +429,7 @@
                     case '':
                         break;
                     case 'jobresume':
-                        for(var i=0;i<BARLENGTH.length;i++){
+                        for (var i = 0; i < BARLENGTH.length; i++) {
                             $bar.eq(i).stop().animate({ 'width': BARLENGTH[i] }, 1220, 'easeInQuad');
                         }
                         break;
@@ -433,29 +437,39 @@
                         break;
                     case 'project':
                         var aBgMove = $('.pro-bgmoving');
-                        var num = 0; 
-                        !function moving(){
+                        var num = 0;
+                        ! function moving() {
                             aBgMove.eq(num).stop().animate({
-                                height:'100%'
-                            },(1-num%2)*400 + 400,function(){
-                                if(num>aBgMove.length) return;
-                                if(num%2==0){
-                                    $pro_item.eq(Math.floor(num/2)).addClass('show');
-                                    $pro_desc.eq(Math.floor(num/2)).addClass('show');
+                                height: '100%'
+                            }, (1 - num % 2) * 400 + 400, function() {
+                                if (num > aBgMove.length) return;
+                                if (num % 2 == 0) {
+                                    $pro_item.eq(Math.floor(num / 2)).addClass('show');
+                                    $pro_desc.eq(Math.floor(num / 2)).addClass('show');
                                 }
                                 moving(num++);
                             })
                         }();
-                        $('.pro-month-Txt').on('mouseover',function(){
-                            $('div').css({
-                                position:'absolute',
-                                top:'30px',
-                                left:'100px',
-                                width:'200px',
-                                height:'200px',
-                                bacground:"#eee"
-                            }).appendTo($cont);
-                        });
+                        $('.pro-month-Txt').on({
+                            'mouseover': function(ev) {
+                                ev.data.div = $('<div></div>');
+                                var $pro = $('#project'); 
+                                var left = ev.pageX - $pro.offset().left+20;
+                                var top = ev.pageY - $pro.offset().top;
+                                var index = $(this).parent().index();
+                                ev.data.div.css({
+                                    position: 'absolute',
+                                    top: (top+110>580?460:top)+'px',
+                                    left: left+'px',
+                                    width: '200px',
+                                    height: '110px',
+                                    background: ev.data.images[index>2?'none':index]
+                                }).appendTo($pro);
+                            },
+                            'mouseout': function(ev) {
+                                ev.data.div.remove();
+                            }
+                        },{'name':'save',images:['url("../images/abchina.jpg")','url("../images/cssn.jpg")','url("../images/cnta.jpg")']});
                         break;
                     case '':
                         break;
@@ -503,7 +517,7 @@
                 }, 420)
             }
         });
-        $('#sendMsg').click(function(){
+        $('#sendMsg').click(function() {
             alert('别点了！这个功能还没做呢！！！');
             return false;
         });

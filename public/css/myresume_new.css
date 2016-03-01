@@ -1042,6 +1042,9 @@ a.myWebsite:hover {
 
 
 /*---------时间线-----------------*/
+.content-project .content-title{
+    margin-bottom: 8px;
+}
 .pro-year,.pro-month-line,.pro-month-Txt{
     position: relative;
     left:50%;
@@ -1124,6 +1127,7 @@ a.myWebsite:hover {
     clear: both;
 
 }
+
 /*-------------------------*/
 .project-time-list>li .pro-item {
     height: 75px;
