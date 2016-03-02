@@ -1,4 +1,7 @@
 @charset "utf-8";
+body{
+	min-width:800px;
+}
 .skin-background{
 	position: fixed;
 	width:100%;
@@ -19,12 +22,47 @@
 	left:0;
 	background-image:linear-gradient(rgba(15,25,50,.3) 0,rgba(15,25,50,.3) 100%);
 }
-.nav-weather{
-	position: absolute;
-	left:0;
-	top:0;
+.topmenu{position: absolute;left:0px;top:0;}
+.weatherBox,.avatar,.myapi{
+	float:left;
 	height:100%;
+}
+.avatar{
+	width:85px;
+	height:35px;
+	margin-left: 15px;
+	background:transparent url('../images/icon.png') no-repeat 0 -24px ;
+}
+.weatherBox{margin-left:10px;}
+.weatherBox.unkown-city .weather-now{
+	display:none;
+}
+.weather-now>span{
+	display:inline-block;
+	vertical-align:middle;
+	height:100%;
+	line-height:35px;
+	color:#fff;
+	font-size:14px;
+}
+.weather-now>span.weather-icon{
+	width:18px;
+	height:18px;
+}
+.myapi>a,.myresume>a{
+	display:block;
+	padding:7px 15px;
+	color:#fff;
+	font-size:16px;
+}
+.myapi>a:hover,.myresume a:hover{text-decoration:underline;}
+.myresume{
+	float:right;
+	position: relative;
+	height:100%;
+	right:15px;
 }
 .wrapper{
 	height:100%;
+	background-color:rgba(64, 64, 64,1);
 }

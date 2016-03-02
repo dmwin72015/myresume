@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -8,23 +9,46 @@
     <meta name="description" content="董敏的web前端工程师个人主页">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
+
 <body>
-	<div class="skin-background" style="background-color:rgb(255,255,255);background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
-    <header class="topbar fix-top">
-    	<div class="topbg"></div>
-		<div class="nav-weather">
-			
-		</div>
-		<div class="myresume" id="myresume">
-			<a href=""></a>
-		</div>
+    <div class="skin-background" style="background-color:rgb(100,160,133);background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
+    <header class="topbar fix-top clearfix">
+        <div class="topbg"></div>
+        <div class="topmenu clearfix">
+        	<div class="avatar" id="avatar">
+            </div>
+            <div class="weatherBox">
+                <div class="weather-now" id="weather">
+                    <span class="city-name">北京</span>
+                    <span class="weather-icon" id="wea-icon"></span>
+                    <span class="temperature">9℃</span>
+                </div>
+            </div>
+            <div class="myapi">
+            	<a href="/api">JS速查</a>
+            </div>
+        </div>
+        <div class="myresume" id="myresume">
+            <a href="../resume/resume.html">我的简历</a>
+        </div>
     </header>
     <div class="wrapper">
-    	
+    	<section></section>
     </div>
     <footer>
-
     </footer>
+    <script>
+    window.onload = function() {
+    	var oAvatar = document.getElementById('avatar');
+    	var oWeaicon = document.getElementById('wea-icon');
+    	oWeaicon.style.backgroundImage = 'url(https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/weather/aladdin/png_18/a0.png)';
+    	oAvatar.addEventListener('transitionend',function(ev){
+    		var oEv = ev || window.event;
+    	},false);
+    }
+    </script>
 </body>
+
 </html>

@@ -224,6 +224,15 @@
     function isIE() {
         return window.navigator.userAgent.toLowerCase().indexOf("msie") > -1 ? !0 : !!0
     }
+    document.onkeydown = function(ev){
+        var oEv = ev || window.event;
+        if(oEv.keyCode == 123 ||(oEv.keyCode==73 && oEv.ctrlKey &&oEv.shiftKey)){
+            return false;
+        }
+    };
+    document.oncontextmenu=function(){
+        return false;
+    };
     $(function() {
         $(".tabs-content-container").on({
             "mouseenter": function(ev) {
