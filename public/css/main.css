@@ -63,6 +63,43 @@ body{
 	right:15px;
 }
 .wrapper{
-	height:100%;
+	width:100%;
 	background-color:rgba(64, 64, 64,1);
+}
+.page-banner{
+	height:200px;
+	background:url(../images/bg_banner.jpg) no-repeat ;
+	background-position:center;
+	background-size:cover;
+}
+
+
+#toTop{
+	position: fixed;
+	right:40px;
+	bottom:40px;
+	width:46px;
+	height:46px;
+	background:rgba(0, 0, 0, 0.5);
+	color:#fff;
+	cursor:pointer;
+	display:none;
+}
+.arrow{
+	display:block;
+	text-align: center;
+	font-size:34px;
+	line-height:46px;
+}
+#toTop:hover>.arrow{
+	display:none;
+}
+#toTop>.text{
+	display:none;
+	font-size:16px;
+	word-wrap:break-word;
+	text-align:center;
+}
+#toTop:hover>.text{
+	display:block;
 }
