@@ -67,11 +67,20 @@ body{
 	background-color:rgba(64, 64, 64,1);
 }
 .page-banner{
-	height:200px;
+	height:240px;
 	background:url(../images/bg_banner.jpg) no-repeat ;
-	background-position:center;
 	background-size:cover;
+	background-position:center 0 ;
 }
+.product-list>li{
+	
+}
+.carousel-Pic{
+	width:;
+}
+
+
+
 #toTop{
 	position: fixed;
 	right:40px;
