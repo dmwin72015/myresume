@@ -12,9 +12,38 @@ $(function(){
 			oToTop.style.opacity = '0';
 		}
 		oToTop.onclick=function(){
-			document.body.scrollTop = 0;
-			ddocument.documentElement.scrollTop  =0; 
+			var top = document.body.scrollTop || document.documentElement.scrollTop;
+			moveOne({
+				start:top,
+				end:0,
+				duration:180,
+			}); 
 		};
+	});
+	function moveOne(options) {
+	    var options = options || {};
+	    var duration = options.duration || 1000;
+	    var easing = Tween['Circ']['easeOut'];
+	    var count = Math.floor(duration / 30);
+	    var n = 0;
+	    clearInterval(timer);
+	    var timer = setInterval(function() {
+	        n++;
+	        var cur = easing(duration * n / count, options.start, options.end-options.start, duration);
+			document.body.scrollTop = cur;
+			document.documentElement.scrollTop =cur; 
+	        if (n == count) {
+	            clearInterval(timer);
+	            options.complete && options.complete();
+	        }
+	    }, 30);
+	}
+	$('#mylogo').mouseenter(function(){
+		$(this).animate({
+			transform:'rotateY(180deg)'
+		},200,'easeInSine',function(){
+
+		})
 	});
 });
 $(function(){
@@ -22,7 +51,6 @@ $(function(){
 });
 window.onload=function(){
 	//document.documentElement.offsetHeight
-
 	//console.log( document.documentElement.clientHeight+'浏览器（内容区域）窗口的可视高度');
 	//console.log( document.body.offsetHeight+'文档（整个页面）的可视高度body');
 }
