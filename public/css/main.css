@@ -24,7 +24,7 @@ body{
 	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#4C0F1932,endColorStr=#4C0F1933,gradientType=0); 
 }
 .topmenu{position: absolute;left:0px;top:0;}
-.weatherBox,.avatar,.myapi{
+.weatherBox,.avatar{
 	float:left;
 	height:100%;
 }
@@ -50,13 +50,13 @@ body{
 	width:18px;
 	height:18px;
 }
-.myapi>a,.myresume>a{
-	display:block;
+.myresume>a{
+	display:inline-block;
 	padding:7px 15px;
 	color:#fff;
 	font-size:16px;
 }
-.myapi>a:hover,.myresume a:hover{text-decoration:underline;}
+.myresume a:hover{text-decoration:underline;}
 .myresume{
 	float:right;
 	position: relative;

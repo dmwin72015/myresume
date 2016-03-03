@@ -1,0 +1,76 @@
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /resume/myweb.html 20.884
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /js/jquery-1.11.0.min.js 6.936
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /js/underscore-1.7.0.min.js 12.546
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /css/common.css 24.963
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /css/main.css 18.871
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /js/myweb.js 10.922
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /products/images/dog9.jpg 10.771
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /images/product_2.jpg 2.448
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /products/images/dog4.jpg 2.462
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /images/icon.png 1.878
+::1【Thu, 03 Mar 2016 11:30:40 GMT】 GET /images/bg_banner.jpg 2.734
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /resume/myweb.html 2.317
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /js/jquery-1.11.0.min.js 9.081
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /css/common.css 12.307
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /css/main.css 12.584
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /js/underscore-1.7.0.min.js 9.715
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /products/images/dog9.jpg 10.145
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /js/myweb.js 18.915
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /images/product_2.jpg 1.495
+::1【Thu, 03 Mar 2016 11:30:50 GMT】 GET /products/images/dog4.jpg 6.111
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /resume/myweb.html 0.881
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /css/common.css 1.611
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /css/main.css 2.113
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /js/jquery-1.11.0.min.js 3.154
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /js/underscore-1.7.0.min.js 5.610
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /js/myweb.js 4.910
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /products/images/dog9.jpg 4.200
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /images/product_2.jpg 7.380
+::1【Thu, 03 Mar 2016 11:30:51 GMT】 GET /products/images/dog4.jpg 9.999
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /resume/myweb.html 10.168
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /js/jquery-1.11.0.min.js 13.054
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /js/underscore-1.7.0.min.js 8.988
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /js/myweb.js 8.631
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /products/images/dog9.jpg 8.765
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /css/common.css 20.665
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /css/main.css 19.108
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /images/product_2.jpg 26.080
+::1【Thu, 03 Mar 2016 11:30:52 GMT】 GET /products/images/dog4.jpg 26.549
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /resume/myweb.html 24.121 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /js/jquery-1.11.0.min.js 8.398 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /js/underscore-1.7.0.min.js 10.520 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /js/myweb.js 10.831 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /products/images/dog9.jpg 10.764 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /css/common.css 34.800 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /css/main.css 18.321 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /images/product_2.jpg 11.709 ms 
+::1【Thu, 03 Mar 2016 11:32:28 GMT】 GET /products/images/dog4.jpg 9.168 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/resume/myweb.html┇17.949 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/js/jquery-1.11.0.min.js┇11.783 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/js/underscore-1.7.0.min.js┇18.060 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/js/myweb.js┇18.488 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/products/images/dog9.jpg┇18.798 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/css/common.css┇41.559 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/css/main.css┇31.077 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/images/product_2.jpg┇4.614 ms 
+::1【Thu, 03 Mar 2016 11:34:10 GMT】GET┇/products/images/dog4.jpg┇2.679 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/resume/myweb.html┇6.728 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/css/common.css┇3.889 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/js/jquery-1.11.0.min.js┇7.353 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/js/underscore-1.7.0.min.js┇7.894 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/css/main.css┇14.291 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/js/myweb.js┇11.048 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/products/images/dog9.jpg┇10.565 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/images/product_2.jpg┇4.903 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/products/images/dog4.jpg┇5.889 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/images/icon.png┇4.979 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:34:44 GMT】GET┇/images/bg_banner.jpg┇4.234 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/resume/myweb.html┇4.724 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/css/common.css┇10.715 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/js/jquery-1.11.0.min.js┇6.734 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/js/underscore-1.7.0.min.js┇8.814 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/css/main.css┇17.876 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/products/images/dog9.jpg┇3.745 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/js/myweb.js┇12.720 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/images/product_2.jpg┇1.802 ms 
+::ffff:192.168.1.135【Thu, 03 Mar 2016 11:35:46 GMT】GET┇/products/images/dog4.jpg┇0.889 ms 
