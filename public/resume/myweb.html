@@ -7,6 +7,7 @@
     <title>董敏-冲向前端-个人主页</title>
     <meta name="keywords" content="web前端,JS,jQuery,前端开发,JS爱好者,知识在于积累" />
     <meta name="description" content="董敏的web前端工程师个人主页">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/jquery-1.11.0.min.js"></script>
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <div class="skin-background" style="_background-color:rgb(100,160,133);_background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
+    <div class="skin-background" style="_background-color:rgb(100,160,133);background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
     <header class="topbar fix-top clearfix">
         <div class="topbg"></div>
         <div class="topmenu clearfix">
@@ -23,7 +24,7 @@
             <div class="weatherBox">
                 <div class="weather-now" id="weather">
                     <span class="city-name">北京</span>
-                    <span class="weather-icon" id="wea-icon"></span>
+                    <span class="weather-icon" id="wea_icon"></span>
                     <span class="temperature">9℃</span>
                 </div>
             </div>
@@ -36,84 +37,123 @@
         </div>
     </header>
     <div class="wrapper clearfix">
-        <section class="banner"></section>
+        <section class="banner" style="opacity: 0.8"></section>
         <section class="">
-            
-        	
         </section>
         <section class="product-wrapper">
-            <ul class="product-list" id="products">
-                <li>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                    <div class="pro-item" style="">
-                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
-                        <div class="name">html5画板</div>
-                        <div class="time">2015-12</div>
-                    </div>
-                </li>
-            </ul>
+            <div class="innner-wapper clearfix">
+                <ul class="product-list" id="products">
+                    <li data-col="c1">
+                        <div id="myinfo" class="pro-item">
+                            <a href="" class="pic"><img src="../products/images/dog9.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                    </li>
+                    <li data-col="c2">
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                    </li>
+                    <li data-col="c3">
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                    </li>
+                    <li data-col="c4">
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                        <div class="pro-item" style="">
+                            <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                    </li>
+                    <li data-col="c4">
+                        <div class="pro-item" style="">
+                            <a href="../products/hover_cross.html" class="pic" target="_blank"><img src="../products/images/dog4.jpg
+                            " alt=""></a>
+                            <div class="name">鼠标移入边框交叉效果</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                        <div class="pro-item" style="">
+                            <a href="../products/hover_cross.html" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                            <div class="name">html5画板</div>
+                            <div class="time">2015-12</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
         </section>
     </div>
-    <footer>
+    <footer class="footer clearfix">
+        <ul>
+            <li>
+                <h3 class="title">前端</h3>
+                <p class="description">
+                    本站所有内容都由本人制作，放在此处分享给大家，供学习、参考。
+                    <br/> 有任何疑问可以QQ练习我，大家共同学习进步。
+                </p>
+            </li>
+            <li>
+                <h3 class="title">友情链接</h3>
+                <ul class="friendly">
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN</a></li>
+                    <li><a href="http://huaban.com/" target="_blank">花瓣</a></li>
+                    <li><a href="http://tool.oschina.net/" target="_blank">在线工具-开源中国社区</a></li>
+                </ul>
+            </li>
+            <li>
+            	<h3 class="title">感谢</h3>
+            	<ul class="thanks">
+                    <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                    <li><a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a></li>
+                    <li><a href="http://glyphicons.com/" target="_blank">Glyphicons </a></li>
+                </ul>
+            </li>
+            <li>
+                <p class="title">沟通</p>
+                <p class="QQ">QQ：57682575</p>
+                <p class="github"><a href="https://github.com/dmwin72015/myresume" target="_blank">GitHub：dmwin72015</a></p>
+            </li>
+        </ul>
+        <p class="copyright">
+            copyright&nbsp;&copy;2016&nbsp;DongMin &nbsp;All rights reserved.
+        </p>
     </footer>
     <div class="" id="toTop">
         <span class="arrow">∧</span>
         <span class="text">回到顶部</span>
     </div>
     <script>
-    console.log(window.navigator.userAgent);
+    	$(function(){
+    		$(window).scroll(function(ev){
+    		});
+    	})
     </script>
 </body>
 
