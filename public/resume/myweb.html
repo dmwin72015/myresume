@@ -9,15 +9,16 @@
     <meta name="description" content="董敏的web前端工程师个人主页">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/jquery-1.11.0.min.js"></script>	
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/underscore-1.7.0.min.js"></script>
 </head>
 
 <body>
-    <div class="skin-background" style="background-color:rgb(100,160,133);background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
+    <div class="skin-background" style="_background-color:rgb(100,160,133);_background-image:url('https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/skin/627.jpg?2')"></div>
     <header class="topbar fix-top clearfix">
         <div class="topbg"></div>
         <div class="topmenu clearfix">
-        	<div class="avatar" id="avatar">
+            <div class="avatar" id="avatar">
             </div>
             <div class="weatherBox">
                 <div class="weather-now" id="weather">
@@ -27,42 +28,92 @@
                 </div>
             </div>
             <div class="myapi">
-            	<a href="/api">JS速查</a>
+                <a href="/api">JS速查</a>
             </div>
         </div>
         <div class="myresume" id="myresume">
             <a href="../resume/resume.html">我的简历</a>
         </div>
     </header>
-    <div class="wrapper">
-    	<section class="page-banner"></section>
-    	<section class="product-wrapper">
-    		<ul class="product-list">
-    			<li class="first-row">
-    				<div class="carousel-Pic"></div>
-    			</li>
-    			<li></li>
-    			<li></li>
-    			<li></li>
-    			<li></li>
-    		</ul>
-    	</section>
+    <div class="wrapper clearfix">
+        <section class="banner"></section>
+        <section class="">
+            
+        	
+        </section>
+        <section class="product-wrapper">
+            <ul class="product-list" id="products">
+                <li>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                    <div class="pro-item" style="">
+                        <a href="" class="pic"><img src="../images/product_2.jpg" alt=""></a>
+                        <div class="name">html5画板</div>
+                        <div class="time">2015-12</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </div>
     <footer>
     </footer>
     <div class="" id="toTop">
-    	<span class="arrow">∧</span>
-    	<span class="text">回到顶部</span>
+        <span class="arrow">∧</span>
+        <span class="text">回到顶部</span>
     </div>
     <script>
-    window.onload = function() {
-    	var oAvatar = document.getElementById('avatar');
-    	var oWeaicon = document.getElementById('wea-icon');
-    	oWeaicon.style.backgroundImage = 'url(https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/weather/aladdin/png_18/a0.png)';
-    	oAvatar.addEventListener('transitionend',function(ev){
-    		var oEv = ev || window.event;
-    	},false);
-    }
+    console.log(window.navigator.userAgent);
     </script>
 </body>
 
