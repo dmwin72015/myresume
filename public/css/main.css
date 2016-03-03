@@ -197,6 +197,7 @@ body{
 	color:#fff;
 	cursor:pointer;
 	display:none;
+	transition:all 0.4s;
 }
 .arrow{
 	display:block;

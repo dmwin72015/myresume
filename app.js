@@ -20,7 +20,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));// 去掉这一行用域名访问就能显示favicon.ico
+
 //设置日志存放位置
 var logDirectory = __dirname + '/logs';
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
