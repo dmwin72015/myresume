@@ -6,7 +6,21 @@
     <title>${title}</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/myresume_new.css">
-    <script type="text/javascript"></script>
+    <style>
+        body { min-width: 700px }
+        .footer { width: 100%; background: #2b2f3e; font-size: 12px; bottom: 0; left: 0; }
+        .footer>ul { padding: 10px 30px; overflow: hidden; }
+        .footer>ul>li:nth-child(1) { width: 30%; }
+        .footer>ul>li { float: left; width: 20%; }
+        .footer a, .footer p, .footer span, .footer h3, .footer ul,.footer li,.copyright { color: #A2A2A2;font-size:12px;line-height:normal; }
+        .footer>ul>li+li { margin-left: 20px; }
+        .footer>ul li .title { font-size: 16px; line-height: 24px; font-weight: bold; }
+        .footer .friendly >li, .thanks>li, .description, .QQ, .github { padding: 3px 0; }
+        .footer .friendly a, .thanks a, .github a { transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1); }
+        .footer .friendly a:hover, .thanks a:hover, .github a:hover { color: #D4D4D4; text-shadow: 0 0 3px #fff; }
+        .footer .copyright { text-align: center; line-height: 34px; border-top: 1px solid #b3b3b3; }
+
+    </style>
 </head>
 
 <body>
@@ -19,6 +33,7 @@
                 <li class="active">
                     getElementsByClassName
                 </li>
+                <li>此功能正在建设当中。。。。涉及到后台交互（数据库不好搞）</li>
             </ul>
         </nav>
     </header>
@@ -97,28 +112,39 @@
         </section>
     </div>
     <footer class="footer clearfix">
-        <div class="description col-md-4">
-            <p class="title">前端</p>
-            <p>
-                本站所有内容都由本人制作，放在此处分享给大家，供学习、参考。
-                <br/> 有任何疑问可以QQ练习我，大家共同学习进步。
-            </p>
-        </div>
-        <div class="friendLink col-md-3">
-            <p class="title">友情链接</p>
-            <ul>
-                <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN</a></li>
-                <li><a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a></li>
-                <li><a href="http://glyphicons.com/" target="_blank">Glyphicons </a></li>
-            </ul>
-        </div>
-        <div class="thanks col-md-5">
-            <p>
-                <span>copyright&nbsp;&copy;2016&nbsp;DongMin &nbsp;</span>
-                <br/>  All rights reserved.
-            </p>
-        </div>
+        <ul>
+            <li>
+                <h3 class="title">前端</h3>
+                <p class="description">
+                    本站所有内容都由本人制作，放在此处分享给大家，供学习、参考。
+                    <br/> 有任何疑问可以QQ联系我，大家一起学习共同进步。
+                </p>
+            </li>
+            <li>
+                <h3 class="title">友情链接</h3>
+                <ul class="friendly">
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN</a></li>
+                    <li><a href="http://huaban.com/" target="_blank">花瓣</a></li>
+                    <li><a href="http://tool.oschina.net/" target="_blank">在线工具-开源中国社区</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="title">感谢</h3>
+                <ul class="thanks">
+                    <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                    <li><a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a></li>
+                    <li><a href="http://glyphicons.com/" target="_blank">Glyphicons </a></li>
+                </ul>
+            </li>
+            <li>
+                <p class="title">交流</p>
+                <p class="QQ">QQ：57682575</p>
+                <p class="github"><a href="https://github.com/dmwin72015/myresume" target="_blank">GitHub：dmwin72015</a></p>
+            </li>
+        </ul>
+        <p class="copyright">
+            copyright&nbsp;&copy;2016&nbsp;DongMin &nbsp;All rights reserved.
+        </p>
     </footer>
 </body>
 
