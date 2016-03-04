@@ -38,9 +38,6 @@
             return d.getDay();
         };
     $.fn.dmDatePicker = function(opt) {
-		this.each(function(){
-			
-		});
         var _this = this;
         var options = ($.isPlainObject(opt) || !opt) ? $.extend(true, {}, default_options, opt) : $.extend({}, default_options),
             Models = ['day', 'month', 'year','years'],
@@ -367,6 +364,7 @@
             };
         createPicker();
         return this;
+        
     };
 
     Date.prototype.getFirstDayWeek = function(year, month) {
