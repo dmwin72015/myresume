@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body, h1, h2, h3, h4, h5, h6, li, p, ul { margin: 0; padding: 0; font-size: 14px; font-family: '\5FAE\8F6F\96C5\9ED1' }
-body, html { width: 100%; height: 100% }
+body, html { width: 100%; height: 100% ;}
 li, ul { list-style: none }
 .my-theme a, a:focus, a:hover, a:visited { text-decoration: none }
 .pull-left { float: left }
@@ -18,7 +18,7 @@ li, ul { list-style: none }
 .page-bg.filter { z-index: 3; background: rgba(59, 89, 152, .15) }
 .sidebar { z-index: 10; height: 35px; background-color: rgba(48, 48, 48, .5) }
 .main-wapper { position: relative; z-index: 6; width: 100%; height: 100% }
-.page { position: relative; padding-top: 75px; width: 100%; height: 100%; overflow: hidden }
+.page { position: relative; padding-top: 75px; width: 100%; height: 100%;}
 .icon_menu, .image-head, .image-head img, .image-head:after, .image-head>a { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50% }
 .pers-tabs-list { float: left; margin: 0; width: 9% }
 .pers-tabs-list>li, .pers-tabs-list>li i { transition: all .5s }
@@ -184,6 +184,7 @@ a.myWebsite, a.myWebsite:hover { line-height: 35px; margin-right: 20px; color: #
 @media screen and (min-width:1100px) and (max-width:1600px) {
 	.container { width: 1130px !important }
 	.pers-tabs-container { padding-left: 0; padding-right: 5px; overflow: hidden }
+	.main-wapper{ overflow: hidden; }
 }
 @media screen and (max-width:800px) {
 	.pers-tabs-list, .tabs-list, .sidebar, .profile_r { display: none }
@@ -193,5 +194,50 @@ a.myWebsite, a.myWebsite:hover { line-height: 35px; margin-right: 20px; color: #
 	.content-inner-container { width: 100% }
 	.pers-tabs-container { padding-right: 0; padding-left: 0 }
 	.page { padding-top: 15px }
-	.widget-profile { height: auto; padding-bottom: 15px }
+	.widget-profile { height: auto; padding-bottom: 15px}
+	.main-wapper{
+		overflow-y: scroll;
+	}
+}
+.change-direct-waper{
+	position: absolute;
+	top:12.5px;
+	height:55px;
+	width:55px;
+	right:120px;
+}
+.change-direct-waper>span{
+	display:block;
+	position: absolute;
+	width:15px;
+	height:15px;
+	background-color:#e6e6e6;
+	border-color:#adadad;
+	cursor:pointer;
+}
+.change-direct-waper>span.active{
+	background-color:#3B5998;
+}
+.change-direct-waper>span:active{
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.direct-up{
+	top:0px;
+	right:20px;
+}
+.direct-down{
+	right:20px;
+	bottom:0;
+}
+.direct-right{
+	top:20px;
+	right:0px;
+}
+.direct-left{
+	top:20px;
+	left:0;
+}
+.direct-center{
+	top:20px;
+	right:20px;
 }

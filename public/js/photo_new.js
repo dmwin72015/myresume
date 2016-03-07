@@ -314,7 +314,7 @@
         })();
         $(".wordbox img").mouseover(function() {});
         var $cont = $(".tabs-content-container");
-        var CHANGTYPE = { "left": { "start": { left: "-50px", "opacity": 0 }, "end": { left: 0, opacity: 1 }, "time": 620 }, "right": { "start": { left: "50px", "opacity": 0 }, "end": { left: 0, opacity: 1 }, "time": 620 }, "up": { "start": { top: "-20px", "opacity": 0 }, "end": { top: 0, opacity: 1 }, "time": 620 }, "down": { "start": { top: "20px", "opacity": 0 }, "end": { top: 0, opacity: 1 }, "time": 620 }, "center": { "start": { "width": "0", "height": "0", "margin-left": "0", "top": $cont.outerWidth() / 2 + "px", "left": $cont.outerHeight() / 2 + "px" }, "end": { width: $cont.outerWidth() + "px", height: $cont.outerHeight() + "px", top: "0", left: "0", "margin-left": "15px" }, "time": 620 }, type: "easeInExpo" };
+        var CHANGTYPE = { "left": { "start": { left: "-50px", "opacity": 0 }, "end": { left: 0, opacity: 1 }, "time": 620 }, "right": { "start": { left: "50px", "opacity": 0 }, "end": { left: 0, opacity: 1 }, "time": 620 }, "up": { "start": { top: "-50px", "opacity": 0 }, "end": { top: 0, opacity: 1 }, "time": 620 }, "down": { "start": { top: "50px", "opacity": 0 }, "end": { top: 0, opacity: 1 }, "time": 620 }, "center": { "start": { "width": "0", "height": "0", "margin-left": "0", "top": $cont.outerWidth() / 2 + "px", "left": $cont.outerHeight() / 2 + "px" }, "end": { width: $cont.outerWidth() + "px", height: $cont.outerHeight() + "px", top: "0", left: "0", "margin-left": "15px" }, "time": 620 }, type: "easeInExpo" };
         var currType = CHANGTYPE["right"];
         var EASING = "easeInCubic";
         var BARLENGTH = ["80%", "75%", "95%", "30%", "25%", "25%"];
@@ -399,25 +399,11 @@
             alert("别点了！这个功能还没做呢！！！");
             return false
         })
-    });
-    /*(function() {
-        var cityInfo = { "01": "北京", "02": "上海", "03": "天津", "04": "重庆", "05": "黑龙江", "06": "吉林", "07": "辽宁", "08": "内蒙古", "09": "河北", "10": "山西", "11": "陕西", "12": "山东", "13": "新疆", "14": "西藏", "15": "青海", "16": "甘肃", "17": "宁夏", "18": "河南", "19": "江苏", "20": "湖北", "21": "浙江", "22": "安徽", "23": "福建", "35": "钓鱼岛", "24": "江西", "25": "湖南", "26": "贵州", "27": "四川", "28": "广东", "29": "云南", "30": "广西", "31": "海南", "32": "香港", "33": "澳门", "34": "台湾", };
-        ({
-            data: {},
-            dataType: "jsonp",
-            jsonp: "_jsonp",
-            timeout: "5000",
-            success: function(data) {
-                var imgUrl = "url(https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/icon/weather/aladdin/png_18/a1.png)";
-                var cityName = $("#weather .city-name");
-                var weaIcon = $("#weather .weather-icon");
-                var temp = $("#weather .temp-number");
-                weaIcon.css("background-image", imgUrl);
-                cityName.text("上海")
-            },
-            error: function(err) {},
+        $('.change-direct-waper>span').on('click',function(){
+            var _this = $(this);
+            currType = CHANGTYPE[_this.attr('data-direct')];
+            _this.addClass('active').siblings().removeClass('active');
         });
-        $.ajax({ url: "http://cdn.weather.hao.360.cn/sed_api_area_query.php", data: { grade: "town", code: "0101" }, dataType: "jsonp", jsonp: "_jsonp", success: function(data) { console.log(data) }, error: function() {} });
-        $.ajax({ url: "http://cdn.weather.hao.360.cn/sed_api_area_query.php", data: { grade: "city", code: "01" }, dataType: "jsonp", jsonp: "_jsonp", success: function(data) { console.log(data) }, error: function() {} })
-    })*/
+    });
+
 })(jQuery);

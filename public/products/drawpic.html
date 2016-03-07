@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 画板</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/drawboard.css">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="./js/drawboard.js"></script>
+</head>
+
+<body>
+    <div class="tool-wapper">
+        <ul>
+            <li>
+                <div class="box pen-box">
+                    <h3 class="title">画笔</h3>
+                    <section>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <div class="box color-box">
+                    <h3 class="title">颜色</h3>
+                    <section class="color now currColor"></section>
+                    <section class="color HEX">
+                        <h5>HEX</h5>
+                        <div class="input-color clearfix">
+                            <span>#</span>
+                            <input type="text" id="hex">
+                        </div>
+                    </section>
+                    <section class="color RGB">
+                        <h5>RGB</h5>
+                        <div class="input-color clearfix">
+                            <input type="text" id="rgb_a">
+                            <input type="text" id="rgb_g">
+                            <input type="text" id="rgb_b">
+                        </div>
+                    </section>
+                    <section class="color opac">
+                        <h5>opacity</h5>
+                        <div class="input-color">
+                            <input type="text" id="rgb">
+                        </div>
+                    </section>
+                    <section class="color choose clearfix">
+                        <div class="color-panel">
+                            <a href="javascript:;"></a>
+                        </div>
+                        <div class="color-drag">
+                            <span class="dragbar"></span>
+                        </div>
+                        <div class="color-number clearfix">
+                            <div class="number-rgb">
+                                <ul>
+                                    <li><span>R</span>
+                                        <input type="text">
+                                    </li>
+                                    <li><span>G</span>
+                                        <input type="text">
+                                    </li>
+                                    <li><span>B</span>
+                                        <input type="text">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="number-hsb ">
+                                <ul>
+                                    <li><span>H</span>
+                                        <input type="text">
+                                    </li>
+                                    <li><span>S</span>
+                                        <input type="text">
+                                    </li>
+                                    <li><span>B</span>
+                                        <input type="text">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="number-hex">
+                                <span>#</span>
+                                <input type="text">
+                                <input type="button" value="choose">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <div class="box shape-box">
+                    <h3 class="title">形状</h3>
+                </div>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="drawboard-wapper">
+        <canvas width="500" height="500" id="mycanvas">亲！你的浏览器Too Old啦</canvas>
+    </div>
+</body>
+
+</html>
