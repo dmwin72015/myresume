@@ -26,4 +26,7 @@ router.get('/:name', function(req, res, next) {
 router.get('/getwether', function(req, res, next) {
     
 });
+router.get('/getBingPic',function(req, res, next){
+    
+})
 module.exports = router;

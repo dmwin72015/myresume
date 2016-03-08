@@ -32,7 +32,7 @@ var accessLogStream = FileStreamRotator.getStream({
     verbose: false
 })
 app.use(
-  logger(':remote-addr【:date[]】:method┇:url┇:response-time ms ', {
+  logger(':remote-addr【:date】:method┇:url┇:response-time ms ', {
       stream: accessLogStream,
   })
 );
