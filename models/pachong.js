@@ -13,34 +13,35 @@ var pathUtil = require("path");
 // });
 var PaChong = {};
 var option = {
-    hostname: "http://tq.360.cn/",
+    host: "cn.bing.com",
+    port:80,
     path: "",
     filepath:'E:\\myPath\\a.html'
 };
 var fsPath = 'E:\\myPath\\a.html';
 
 PaChong.getData = function(url, fn) {
-    url = url || '';
-    if (url) return;
+    // url = url || 'http://cn.bing.com/';
     var req = http.request(option, function(res) {
-        res.on("data", function(d) {
+        res.on("data", function(data) {
             fs.exists(option.filepath, (exists) => {
                 if (exists) {
-                    fs.appendFile(fsPath, d, 'utf8', (err) => {
+                    fs.appendFile(fsPath, data, 'utf8', (err) => {
                         if (err) throw err;
-                        
                     });
                 } else {
-                    fs.writeFile(fsPath, d, 'utf8', (err) => {
+                    fs.writeFile(fsPath, data, 'utf8', (err) => {
                         if (err) throw err;
-                    })
+                    });
                 }
             });
         });
     }).on("error", function(e) {
         console.log(e.message);
+    }).on("end",()=>{
+        console.log('over.......');
     });
-    req.end();
+    // req.end();
 };
 
 function writeDate(data, fn) {
@@ -52,4 +53,5 @@ function writeDate(data, fn) {
         }
     });
 }
+PaChong.getData();
 module.exports = PaChong;

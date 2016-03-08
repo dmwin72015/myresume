@@ -227,7 +227,7 @@
     document.onkeydown = function(ev){
         var oEv = ev || window.event;
         if(oEv.keyCode == 123 ||(oEv.keyCode==73 && oEv.ctrlKey &&oEv.shiftKey)){
-            return false;
+           return false;
         }
     };
     document.oncontextmenu=function(){
@@ -404,6 +404,18 @@
             currType = CHANGTYPE[_this.attr('data-direct')];
             _this.addClass('active').siblings().removeClass('active');
         });
+        var oHead = $('#myhead');
+        $(document).on('mousemove',function(ev){
+            var x = ev.pageX;
+            var y = ev.pageY;
+            if(x<oHead.offset().left){
+                var sSrc = '../images/my_l.jpg';
+            }else if(x>oHead.offset().left+oHead.outerWidth()){
+                var sSrc = '../images/my_r.jpg';
+            }else{
+                var sSrc = '../images/my_c.jpg';
+            }
+            oHead.find('img').attr('src',sSrc);
+        })
     });
-
 })(jQuery);
