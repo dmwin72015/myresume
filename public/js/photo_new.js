@@ -381,7 +381,9 @@
             if (ev.target.tagName.toLowerCase() != "ul") {
                 var target = $(ev.target).parent();
                 target.addClass("select").siblings().removeClass("select");
-                $("#page-bg").attr("class", "page-bg " + target.attr("data-page"))
+                $("#page-bg").attr("class", "page-bg " + target.attr("data-page"));
+                $("#page-bg").css('background-image','url('+target.find('img').eq(0).attr("src")+')')
+                console.log(target.find('img').eq(0).attr("src"));
             }
         }).css("width", $(".bgImglist").find("li").length * 135 - 15 + "px");
         $("#left-arrow,#right-arrow").click(function(ev) {

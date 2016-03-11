@@ -12,40 +12,26 @@
 
 <body>
     <div class="tool-wapper">
-        <ul>
+        <ul class="tool-list">
             <li>
-                <div class="box pen-box">
-                    <h3 class="title">画笔</h3>
-                    <section>
-                    </section>
+                <div class="icon pen"><i class="">笔</i></div>
+                <div>
                 </div>
             </li>
             <li>
-                <div class="box color-box">
-                    <h3 class="title">颜色</h3>
-                    <section class="color now currColor"></section>
-                    <section class="color HEX">
-                        <h5>HEX</h5>
-                        <div class="input-color clearfix">
-                            <span>#</span>
-                            <input type="text" id="hex">
-                        </div>
-                    </section>
-                    <section class="color RGB">
-                        <h5>RGB</h5>
-                        <div class="input-color clearfix">
-                            <input type="text" id="rgb_a">
-                            <input type="text" id="rgb_g">
-                            <input type="text" id="rgb_b">
-                        </div>
-                    </section>
-                    <section class="color opac">
-                        <h5>opacity</h5>
-                        <div class="input-color">
-                            <input type="text" id="rgb">
-                        </div>
-                    </section>
-                    <section class="color choose clearfix">
+                <div class="icon line"><i class="">形</i></div>
+                <div>
+                </div>
+            </li>
+            <li>
+                <div class="icon"><i class=""></i></div>
+                <div>
+                </div>
+            </li>
+            <li>
+                <div class="icon color"><i class=""></i></div>
+                <div class="choosepanel hide">
+                    <section class="color choose clearfix ">
                         <div class="color-panel">
                             <a href="javascript:;"></a>
                         </div>
@@ -89,11 +75,27 @@
                 </div>
             </li>
             <li>
-                <div class="box shape-box">
-                    <h3 class="title">形状</h3>
+                <div class="icon lineWidth"><i class=""></i></div>
+                <div class="lineWidthpanel">
+                    <ul class="lineWidth-list">
+                        <li>
+                            <span data-width="1"></span>
+                        </li>
+                        <li>
+                            <span data-width="3"></span>
+                        </li>
+                        <li>
+                            <span data-width="5"></span>
+                        </li>
+                        <li>
+                            <input type="text">PX   
+                        </li>
+                        <li>
+                            <input type="button" value="OK">
+                        </li>
+                    </ul>
                 </div>
             </li>
-            <li></li>
             <li></li>
         </ul>
     </div>

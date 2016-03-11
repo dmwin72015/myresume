@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模仿手机屏幕锁定</title>
+    <style>
+    body,
+    ul,
+    p {
+        margin: 0;
+        padding: 0;
+        font-family: 'arial';
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .wapper {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px 20px;
+        overflow: hidden;
+    }
+    
+    .left,
+    .right {
+        float: left;
+        height: 470px;
+        position: relative;
+    }
+    
+    .left {
+        width: 380px;
+        /* background-color: #305065; */
+        cursor: none;
+    }
+    
+    .right {
+        width: 680px;
+    }
+    
+    .filter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 470px;
+        text-align: center;
+        font-size: 50px;
+        color: #fff;
+        top: 0;
+        left: 0;
+        background-color: rgba(200, 200, 200, 0.6);
+    }
+    
+    .filter:hover {
+        cursor: pointer;
+    }
+    
+    .right {
+        margin-left: 15px;
+    }
+    
+    .btngroup {
+        padding-bottom: 10px;
+    }
+    
+    .schemalist {
+        /* overflow: hidden; */
+    }
+    
+    .schemalist li {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .itemwaper {
+        width: 150px;
+        height: 200px;
+        background-color: #eee;
+    }
+    
+    .pic {
+        border: 3px solid transparent;
+        width: 144px;
+        height: 194px;
+    }
+    
+    .itemwaper.use .pic {
+        border-color: orange;
+    }
+    
+    .pic img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #screen {
+        /* background-color: #333; */
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h5 style="text-align: center">
+        默认情况下是新增解锁方案，新增完成了，进入解锁方案，除非点击“新增方案”按钮，否则一直解锁方案。
+    </h5>
+    </div>
+    <div class="wapper">
+        <div class="left">
+            <canvas width="380" height="470" id="screen">
+                抱歉！你的浏览器无法使用此功能！！！
+            </canvas>
+            <!-- <div class="filter" id="">新增解锁方式</div> -->
+        </div>
+        <div class="right">
+            <p class="btngroup">
+                <input type="button" value="新增方案" id="createSchema">
+                <input type="button" value="删除方案" id="deleteSchema">
+                <input type="button" value="删除所有" id="deleteAllSchema">
+            </p>
+            <ul class="schemalist" id="schemalist">
+                <!-- <li>
+                    <div class="itemwaper use">
+                        <div class="pic" id="mycanvasimg">
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+window.onload = function() {
+    var oCan = document.getElementById('screen');
+    if (!oCan.getContext) return;
+    var config = {
+        width: 380,
+        height: 470,
+        left: oCan.offsetLeft,
+        top: oCan.offsetTop,
+        circle_r: 30,
+        color: '#abcfff',
+        lineWidth: '3',
+        locat: [],
+        num: 3,
+    };
+    var trail = []; //路径
+    var schame = []; //方案
+    var status = '1'; //解锁方案  1 新增  0 解锁
+    var ctx = oCan.getContext("2d");
+    // ctx.globalCompositeOperation = 'destination-over';
+
+
+    function drag_circle(conf) { //初始化圆圈
+        ctx.beginPath();
+        ctx.fillStyle = '#1F4C75';
+        ctx.rect(0, 0, config.width, config.height);
+        ctx.fillRect(0, 0, config.width, config.height);
+        ctx.closePath();
+        var r = config.circle_r;
+        var num = config.num;
+        ctx.lineWidth = config.lineWidth;
+        ctx.strokeStyle = config.color;
+        for (var i = 0; i < num; i++) {
+            for (var j = 0; j < num; j++) {
+                ctx.beginPath();
+                var x = config.width / 3 * (i + 1 / 2),
+                    y = config.height / 3 * (j + 1 / 2);
+                ctx.arc(x, y, r, 0, 2 * Math.PI);
+                ctx.closePath();
+                ctx.stroke();
+                config.locat.push({
+                    x: x,
+                    y: y
+                });
+            }
+        }
+    }
+    drag_circle();
+    // drag_ruleLine();
+    function drag_ruleLine() { //画格子线条
+        var num = config.num;
+        var width = config.width;
+        var height = config.height;
+        for (var i = 1; i < num; i++) {
+            ctx.beginPath();
+            ctx.strokeStyle = '#fff';
+            ctx.moveTo(width / 3 * i, 0);
+            ctx.lineTo(width / 3 * i, height);
+            ctx.closePath();
+            ctx.stroke();
+        }
+        for (var j = 1; j < num; j++) {
+            ctx.beginPath();
+            ctx.strokeStyle = '#fff';
+            ctx.moveTo(0, height / 3 * j);
+            ctx.lineTo(width, height / 3 * j);
+            ctx.closePath();
+            ctx.stroke();
+        }
+    }
+
+    function draw_Mousepoint(x, y, r) { //绘制鼠标位置的圆圈
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(10,10,10,0.3)';
+        ctx.lineWidth = '0';
+        ctx.strokeStyle = 'rgba(200,200,200,0)';
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+    }
+
+    function draw_trailPoint(x, y) { //绘制轨迹的点
+        ctx.beginPath();
+        ctx.arc(x, y, config.circle_r * 0.5, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(230,230,230,1)';
+        ctx.lineWidth = '0';
+        ctx.strokeStyle = 'rgba(200,200,200,0)';
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    }
+
+    function judgePos(x, y) { //返回碰到的圆圈圆心坐标
+        var locat = config.locat;
+        var r = config.circle_r;
+        for (var i = 0; i < locat.length; i++) {
+            if (x >= locat[i]['x'] - r && x <= locat[i]['x'] + r && y >= locat[i]['y'] - r && y <= locat[i]['y'] + r) {
+                // console.log('重叠.....');
+                return locat[i];
+            }
+        }
+        return !!0;
+    }
+
+    function drawLine(opt) { //绘制出轨迹
+        var arr = trail;
+        for (var i = 0; i < trail.length; i++) {
+            ctx.beginPath();
+            ctx.lineWidth = "5";
+            ctx.strokeStyle = 'rgba(230,230,230,1)';
+            ctx.moveTo(trail[i].x, trail[i].y);
+            if (i < trail.length - 1) {
+                ctx.lineTo(trail[i + 1].x, trail[i + 1].y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+            draw_trailPoint(trail[i].x, trail[i].y);
+        }
+    }
+
+    function init() { //主要方法
+        var locat = config.locat;
+        var r = config.circle_r;
+        var left = config.left;
+        var top = config.top;
+        var dragable = false; //是否开始绘制
+
+        oCan.onmousedown = function(ev) {
+            var oEv = ev || window.event;
+            oEv.preventDefault();
+            var x_in = oEv.clientX - left,
+                y_in = oEv.clientY - top;
+            var circlePos = judgePos(x_in, y_in);
+            if (circlePos) {
+                dragable = true;
+                trail.push({
+                    x: circlePos.x,
+                    y: circlePos.y
+                });
+            }
+        };
+        var lastX = 0,
+            lastY = 0; //上一次坐标
+        oCan.onmousemove = function(ev) {
+            var oEv = ev || window.event;
+            var x_in = oEv.clientX - left,
+                y_in = oEv.clientY - top;
+            ctx.clearRect(0, 0, 380, 470);
+            drag_circle(); //每次重新绘制九个圈
+            draw_Mousepoint(x_in, y_in, 15);
+            console.log(dragable);
+            if (dragable) {
+                var circlePos = judgePos(x_in, y_in);
+                if (circlePos) {
+                    if (circlePos.x != trail[trail.length - 1].x || circlePos.y != trail[trail.length - 1].y) {
+                        //判断是否在当前圈内移动
+                        trail.push({
+                            x: circlePos.x,
+                            y: circlePos.y
+                        });
+                    }
+                }
+                drawLine();
+                lastX = oEv.clientX - left, lastY = oEv.clientY - top;
+            }
+        };
+        oCan.onmouseup = function() {
+            if (status == '1') { //解锁方案  1 新增  0 解锁
+                schame.push({
+                    src: oCan.toDataURL("image/png"),
+                    trail: cloneArray(trail)
+                });
+                status = 0;
+            } else {
+                var recordTrail = cloneArray(trail);
+
+            }
+            canToImg(oCan);
+            trail.length = 0;
+            dragable = false;
+            ctx.closePath();
+        }
+        oCan.onmouseout = function() {
+            ctx.clearRect(0, 0, 380, 470);
+            drag_circle();
+            trail.length = 0;
+        }
+    }
+    init();
+
+    function cloneArray(arr) {
+        if (!Array.isArray(arr)) return;
+        if (Array.slice) return arr.slice();
+        var tmp = new Array();
+        for (var i = 0; i < arr.length; i++) {
+            tmp.push(arr[i]);
+        }
+        return tmp;
+    }
+
+    function canToImg(canvas) {
+        var oUl = document.getElementById('schemalist');
+        var oLi = document.createElement('li');
+        oLi.innerHTML = '<div class="itemwaper use"><div class="pic"><img src="' + canvas.toDataURL("image/png") + '"></img></div></div>';
+        oUl.appendChild(oLi);
+        var oLi_now = oUl.getElementsByTagName('li');
+        if (oLi_now.length > 1) {
+            var aClass = oLi_now[oLi_now.length - 2].getElementsByTagName('div')[0].classList;
+            aClass.remove('use');
+        }
+    }
+
+    var createBtn = document.getElementById('createSchema');
+    var deleteBtn = document.getElementById('deleteSchema');
+    var deleteAll = document.getElementById('deleteAllSchema');
+    createBtn.onclick = function() {
+        if (schame.length > 3) {
+            alert('亲！只允许有三个方案哦！');
+            status == '0';
+        } else {
+            status == '1';
+        }
+    }
+    deleteBtn.onclick = function(){
+        var oDiv = document.getElementsByClassName('itemwaper use')[0];
+        if(!oDiv) return;
+        if(oDiv.parentNode.previousSibling){
+            if(oDiv.parentNode.previousSibling.nodeType != 3){
+                oDiv.parentNode.previousSibling.children[0].classList.add('use');
+            }
+        }
+        oDiv.parentNode.removeChild(oDiv);
+
+    };
+    deleteAll.onclick=function(){
+        document.getElementById('schemalist').innerHTML = '';
+    };
+
+};
+</script>
+
+</html>
+<!-- <li>
+                    <div class="itemwaper use">
+                        <div class="pic" id="mycanvasimg">
+                        </div>
+                    </div>
+                </li> -->
