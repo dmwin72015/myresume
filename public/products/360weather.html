@@ -3,11 +3,86 @@
 <head>
 	<meta charset="UTF-8">
 	<title>天气预报</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="./css/weather.css">
+	<script type="text/javascript"></script>
 </head>
 <body>
-	<div>
-		
-		
+	<header class="header">
+		<h3>天气预报 | 感谢360的API</h3>
+	</header>
+	<div class="contentWrapper">
+		<div class="container">
+            <div class="row">
+                <div class="col-md-12 curr-place">
+                    <ul class="address clearfix">
+                        <li>
+                            <span class="btn btn-default " id="province">
+                                北京
+                            </span>
+                            <div class="province-list">
+                                a*
+                            </div>
+                        </li>
+                        <li>
+                            <span class="btn btn-default " id="city">
+                                北京
+                            </span>
+                            <div class="city-list">
+
+                            </div>
+
+                        </li>
+                        <li>
+                            <span class="btn btn-default" id="town">
+                                北京
+                            </span>
+                            <div class="town-list">
+
+                            </div>
+                        </li>
+                        <li>
+                            <input type="button" value="确定">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			<div class="row">
+				<div class="col-md-6">
+                    <div class="current-Weather">
+                        <div class="thermometer">
+                            <div class="ther-pipe"></div>
+                            <div class="ther-ball"></div>
+                            <div class="ther-scale"></div>
+                        </div>
+                        <p class="time"></p>
+                    </div>
+                </div>
+                <div class="col-md-2 hidden-sm">
+                    <div class="day-Weather"></div>
+                </div>
+                <div class="col-md-2 hidden-sm">
+                    <div class="nigh-tWeather"></div>
+                </div>
+                <div class="col-md-2 hidden-sm">
+                    <div class="life-Index">
+
+                    </div>
+                </div>
+			</div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+
+            </div>
+		</div>		
 	</div>
 </body>
 </html>
