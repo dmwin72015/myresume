@@ -354,7 +354,7 @@ function showDate(obj) {
 
 function showWeather(data) {
     data = data || {};
-    var str = '<div class="day-item ${today}"><a href="javascript:;"><h3>${day_week}</h3><p class="wea-icon"></p><p>${temp}</p><p>${day_to_night_wea}</p><p>${wind}</p></a></div>';
+    var str = '<div class="day-item ${today}"><a href="../products/360weather.html"><h3>${day_week}</h3><p class="wea-icon"></p><p>${temp}</p><p>${day_to_night_wea}</p><p>${wind}</p></a></div>';
     var arrWea = data.weather;
     var arrDay = $('#recentlyDay');
     if (!!arrDay) {
@@ -366,7 +366,8 @@ function showWeather(data) {
                 res = str.replace(/\$\{\s*day_week\s*\}/g, n == 0 ? '今天(' + getWeekCN(date) + ')' : ((n == 1) ? '明天(' + getWeekCN(date) + ')' : ((n == 2) ? '后天(' + getWeekCN(date) + ')' : getWeekCN(date)))).replace(/\$\{\s*temp\s*\}/g, weaDay[2] + ' ~ ' + weaNight[2] + '℃').replace(/\$\{\s*day_to_night_wea\s*\}/g, weaChange).replace(/\$\{\s*wind\s*\}/g, weaDay[3] + weaDay[4]).replace(/\$\{\s*today\s*\}/g, n == 0 ? 'today' : '').replace('无持续风向','');
             $('#recentlyDay').append($(res));
         }
-    } 
+    }
+    $('.temperature').text(data.realtime.weather.temperature+'℃'); 
 }
 function getWeekCN(date, sep) {
     var oDate = new Date();

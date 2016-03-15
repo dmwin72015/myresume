@@ -132,7 +132,7 @@ ul { list-style: none; }
 .square-s2>span:nth-child(3) { -webkit-animation-delay: -0.9s; -moz-animation-delay: -0.9s; animation-delay: -0.9s; }
 .square-s2>span:nth-child(4) { -webkit-animation-delay: -0.8s; -moz-animation-delay: -0.8s; animation-delay: -0.8s; }
 .square-s3 { position: relative; }
-.square-s3>div { position: absolute; width: 5px; height: 20px; background: #fff; -webkit-transition:; -webkit-animation: square_s3 2s infinite linear; -moz-animation: square_s3 2s infinite linear; animation: square_s3 2s infinite linear; }
+.square-s3>div { position: absolute; width: 5px; height: 20px; background: #fff;  -webkit-animation: square_s3 2s infinite linear; -moz-animation: square_s3 2s infinite linear; animation: square_s3 2s infinite linear; }
 @-webkit-keyframes square_s3 {
 	30% { opacity: 0.3; }
 	100% { opacity: 1; }
@@ -190,7 +190,7 @@ ul { list-style: none; }
 	background-color: #fff;
 	right:40px;
 	top:105px;
-	-webkit-animation: pacman_eat3 1 s  infinite linear;
+	-webkit-animation: pacman_eat3 1s  infinite linear;
 	-moz-animation: pacman_eat3 1s  infinite linear;
 	animation: pacman_eat3 1s  infinite linear;
 }
